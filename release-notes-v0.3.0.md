@@ -26,12 +26,6 @@ None
 
 None  
 
-### Supported hardware platforms
-
-**client-sdk**:  
-X86 (source and binary)  
-ARM-SE, ARM M4, ARM A7 (source only)  
-
 ### Documentation
 
 https://secure-device-onboard.github.io/docs/  
