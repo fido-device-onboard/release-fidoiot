@@ -2,7 +2,7 @@ v0.3.0
 
 ### New features
 
-This release contains a reference implementation of [FIDO IoT draft spec](https://fidoalliance.org/specs/fidoiot/FIDO-IoT-spec-v1.0-wd-20200730.html). This implementation inherits the initial code from the protocol-next branch of [PRI](https://github.com/secure-device-onboard/pri) repository.
+This release contains a reference implementation of [FIDO IoT draft spec](https://fidoalliance.org/specs/fidoiot/FIDO-IoT-spec-v1.0-wd-20200730.html). This implementation inherits the initial code from the protocol-next branch of [PRI](https://github.com/secure-device-onboard/pri/tree/protocol-next) repository.
 
 * The core protocol implementation supports the following cryptographic algorithms:
   * Signing keys: ECDSA NIST P-256, ECDSA NIST P-384, RSA2048RESTR, RSA3072, Intel EPID 1.1
