@@ -6,8 +6,8 @@ This release contains a reference implementation of [FIDO Device Onboard (FDO) P
 
 It includes 4 components:
   * Protocol Reference Implementation (PRI): [pri-fidoiot](https://github.com/secure-device-onboard/pri-fidoiot) is a JAVA based implementation of all the components specified in the FDO Proposed Standard.
-  * Client SDK: [client-sdk-fidoiot](https://github.com/secure-device-onboard/client-sdk-fidoiot) is a C based implementation for the device component specified in the FDO Proposed Standard. Additionally it supports an implementation of the device that uses TPM infrastructure.
-  * EPID Verificatio Service: [epid-verification-service](https://github.com/secure-device-onboard/epid-verification-service) is a wrapper service written on top of EPID SDK to assist FDO Rendezvous service and FDO Owner service to perform device signature verification for EPID based devices.
+  * Client SDK: [client-sdk-fidoiot](https://github.com/secure-device-onboard/client-sdk-fidoiot) is a C based implementation for the device component specified in the FDO Proposed Standard. Additionally, it supports an implementation of the device that uses TPM infrastructure.
+  * EPID Verification Service: [epid-verification-service](https://github.com/secure-device-onboard/epid-verification-service) is a wrapper service written on top of EPID SDK to assist FDO Rendezvous service and FDO Owner service to perform device signature verification for EPID based devices.
   * Test: [test-fidoiot](https://github.com/secure-device-onboard/test-fidoiot) implements a test-suite that gets executed as part of continuous integration pipeline.
 
 ### New Features
@@ -32,10 +32,10 @@ It includes 4 components:
 
 **pri-fidoiot**: Support for Intel OnDie ECDSA based device attestation has been included.
 
-**epid-verification-service**: It exposes following REST end-points.
+**epid-verification-service**: It exposes the following REST end-points.
   * Endpoints to retrieve EPID resources such as privrl, sigrl, public key
   * Endpoints to get EPID signature verification proof result
-  * Endpoints to download cryptomaterial tar ball and cryptomaterial signature files
+  * Endpoints to download crypto material tarball and crypto material signature files
 
 **epid-verification-service**: Provides Docker Compose based scripts to deploy the services.
 

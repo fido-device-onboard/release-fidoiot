@@ -1,5 +1,6 @@
 # About
-This repository is used to maintain release artifacts for FIDO IoT draft spec implementation.
+This repository is used to maintain release artifacts for FIDO Device Onboard (FDO) Proposed
+Standard implementation.
 
 # List of release notes
 
