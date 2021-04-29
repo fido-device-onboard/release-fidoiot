@@ -65,6 +65,7 @@ None
 ```
 5228781026fc2ea3d90d87c57e254cd4e85b570bc3b858a691141ba0af6b05f2 - client-sdk-fidoiot-v0.5.0.tar.gz
 9024db7e51957b9a1f4392a06fafc11e6284adcc3e9fc7106ac335d30abd6ec3 - pri-fidoiot-v0.5.0.tar.gz
+747dfe5380c2adb4c54253e241f049398242250677451d31bd1bd58d4c027880 - NOTICES-v0.5.0.tar.gz
 ```
 
 ### Documentation
