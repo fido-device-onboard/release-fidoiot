@@ -59,6 +59,14 @@ None
 
 * The REST end-point call for uploading ServiceInfo files to the 'owner' database occasionally fails. This is tracked through GitHub issue [pri-fidoiot#117](https://github.com/secure-device-onboard/pri-fidoiot/issues/117).
 
+### SHA256 checksum for release binaries
+
+*Following SHA256 checksum is calculated using sha256sum tool*
+```
+5228781026fc2ea3d90d87c57e254cd4e85b570bc3b858a691141ba0af6b05f2 - client-sdk-fidoiot-v0.5.0.tar.gz
+9024db7e51957b9a1f4392a06fafc11e6284adcc3e9fc7106ac335d30abd6ec3 - pri-fidoiot-v0.5.0.tar.gz
+```
+
 ### Documentation
 
 https://secure-device-onboard.github.io/docs/
