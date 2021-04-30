@@ -70,7 +70,7 @@ None
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs/
+https://secure-device-onboard.github.io/docs/0.5.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 
