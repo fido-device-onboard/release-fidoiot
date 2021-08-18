@@ -1,7 +1,5 @@
 v1.0.0
 
-### Components
-
 This release contains a reference implementation of [FIDO Device Onboard (FDO) Specification](https://fidoalliance.org/specs/FDO/fido-device-onboard-v1.0-ps-20210323/).
 
 It includes 4 components:
@@ -12,7 +10,50 @@ It includes 4 components:
 
 ### New Features
 
-pending
+**pri-fidoiot**: A new component 'aio' (All-in-one Demo) is included. It implements all the FDO
+services witin a single container. REST APIs are provided to configure the component.
+
+**pri-fidoiot**: Docker based build scripts are provided for building the source code.
+
+**pri-fidoiot**: The API in Manufacturer is updated to take the RendezvousInfo blob as input. A
+script 'get-cbor-bytes.sh' is provided to generate the CBOR blob in required format.
+
+**pri-fidoiot**: New end-points are created in PRI services to receive Error-Type255 messages.
+
+**pri-fidoiot**: SLF4J based logging infrastructure is developed. In default configuration, INFO
+messages are redirected to console and DEBUG messages are redirected to a log file.
+
+**pri-fidoiot**: Both HTTP and HTTPS support is enabled for all the PRI services by default.
+
+**client-sdk**, **pri-fidoiot**: The test credentials (attestation keystores, SSL keystores,
+truststore) has been removed from source code. A script 'keys_gen.sh' is provided to generate test
+credentials for demo usage.
+
+**client-sdk**: Manufacturer address update -- add more details --
+
+### Changes to existing features
+
+**pri-fidoiot**: Diffie-Hellman key exchage support is added.
+
+**pri-fidoiot**: SoftHSM support has been removed from 'Manufacturer' and 'Reseller' components.
+
+**pri-fidoiot**: The ServiceInfo module is refactored to support MTU size as low as 256 bytes. The
+maximum supported ServiceInfo MTU size is 60000 bytes (supported by only PRI device).
+
+**client-sdk-fidoiot**, **pri-fidoiot**: Security improvements include updating Key Derivation
+Function implementation as per security recommendations, improving input validation,
+fixing a few memory leaks etc.
+
+**client-sdk-fidoiot**, **pri-fidoiot**: Credential REUSE feature is disabled in default PRI Owner
+implementation. This can be re-enabled for demonstration purpose.
+
+**client-sdk-fidoiot**, **pri-fidoiot**: COSE signature generation is fixed to include protected
+header in signature payload.
+
+**client-sdk-fidoiot**: Support for AES-GCM and AES-CCM modes has been included and support for
+AES-CBC and AES-CTR modes has been removed. Support for ASYMKEX and Diffie-Hellman key exchange as
+well as use of RSA for device key attestation has also been removed.
+
 
 ### Supported Cryptographic Modes
 
@@ -44,7 +85,7 @@ AES-CCM-64-128-256.
 
 * For COSE signatures, ES512, RS256 and RS384 signature types are not supported. (section 3.3.5)
 
-### Implementation Notes
+### Known Issues
 
 **pri-fidoiot**, **client-sdk-fidoiot**: Section 3.3.2 defines hashtype as 'uint8', but the values
 for SHA256 and SHA384 are negative. In the implementation, the 'hashtype' is considered as 'int8'.
@@ -64,8 +105,6 @@ conflicts with the TO0Scheduler.
 
 **client-sdk**: IPAddress.ip6 is not supported. (section 3.3.9)
 
-### Known Issues
-
 **client-sdk-fidoiot**: Error code values are not implemented as per section 5.1. Generic error code '100'
 and '500' are sent to the servers. [issue #](URL)
 
@@ -75,14 +114,6 @@ rarely and is often fixed during successive retries. [issue #](URL)
 **pri-fidoiot**: get-cbor-bytes.sh script uses cbor.me website for generating the RendezvousInfo
 CBOR bytes. This site should be accessible from the local machine while generating RendezvousInfo
 for different configurations. [issue #](URL)
-
-### Changes to existing features
-
-pending
-
-### Discontinued features
-
-**client-sdk-fidoiot** AES-CTR and AES-CBC modes are no longer supported.
 
 ### Fixed Issues
 
