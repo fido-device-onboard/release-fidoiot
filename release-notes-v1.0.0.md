@@ -10,6 +10,20 @@ It includes 4 components:
 
 ### New Features
 
+**pri-fidoiot**: It supports the following cryptographic modes.
+  * Signing keys: ECDSA NIST P-256, ECDSA NIST P-384, RSA2048RESTR, and Intel EPID 1.1.
+  * Key Exchanges: ECDH256, ECDH384, ASYMKEX2048, ASYMKEX3072, DHKEXid14, and DHKEXid15.
+  * Ciphers: AES128/CTR/HMAC-SHA256, AES128/CBC/HMAC-SHA256, AES256/CTR/HMAC-SHA384, AES256/CBC/HMAC-SHA384, AES-CCM-64-128-128, AES-CCM-64-128-256, AES128GCM, AES256GCM, and RSA/NONE/OAEPWithSHA256AndMGF1Padding.
+  * Public Key Encoding: Crypto, X509, and COSEX509.
+  * COSE Signature Types: ES256, ES384, RS256, and RS384.
+
+**client-sdk-fidoiot**: It supports the following cryptographic modes.
+  * Signing keys: ECDSA NIST P-256, and ECDSA NIST P-384
+  * Key Exchanges: ECDH256, and ECDH384
+  * Ciphers: AES-CCM-64-128-128, AES-CCM-64-128-256, AES128GCM, and AES256GCM.
+  * Public Key Encoding: COSEX509.
+  * COSE Signature Types: ES256, and ES384.
+
 **client-sdk-fidoiot**, **pri-fidoiot**: The test credentials (attestation keystores, SSL keystores,
 truststore) has been removed from source code. A script 'keys_gen.sh' is provided to generate test
 credentials for demo usage.
@@ -63,94 +77,69 @@ Protected Header in signature payload.
 AES-CBC and AES-CTR modes has been removed. Support for ASYMKEX and Diffie-Hellman key exchange as
 well as use of RSA for device key attestation has also been removed.
 
-### Supported Cryptographic Modes
-
-**pri-fidoiot** supports the following cryptographic modes.
-
-* For device attestation, it supports Intel EPID keys based on EPID 1.0/EPID 1.1 and ECC keys
-based on SECP256R1 and SECP384R1 curves.
-
-* For key exchange, it supports DHKEXid14, DHKEXid15, ASYMKEX2048, AESYMKEX3072, ECDH256 and ECDH384
-  modes.
-
-* For session encryption, it supports the following AES modes - AES-CTR-128, AES-CTR-256,
-  AES-CBC-128, AES-CBC-256, A128GCM, A256GCM, AES-CCM-64-128-128 and AES-CCM-64-128-256.
-
-* For public key encoding, it supports Crypto, X509 as well as COSEX509 encoding. (section 3.3.4)
-
-* For COSE signatures, ES256, ES384, RS256 and RS384 signature types are supported. (section 3.3.5)
-
-**client-sdk-fidoiot**: It supports a subset of the above cryptographic modes.
-
-* For device attestation, ECC keys based on SECP256R1 and SECP384R1 are supported.
-
-* For Key Exchange, ECDH256 and ECDH384 modes are supported.
-
-* For session encryption, it supports following AES modes - A128GCM, A256GCM, AES-CCM-64-128-128 and
-AES-CCM-64-128-256.
-
-* For public key encoding, COSEX509 encoding is used. (section 3.3.4).
-
-* For COSE signatures, ES256 and ES384 signature types are supported. (section 3.3.5)
-
 ### Known Issues
 
 **pri-fidoiot**, **client-sdk-fidoiot**: Section 3.3.2 defines hashtype as 'uint8', but the values
 for SHA256 and SHA384 are negative. In the implementation, the 'hashtype' is considered as 'int8'.
- Refer to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/150) for
- more details.
+ This is tracked through GitHub issue
+ [client-sdk-fidoiot#150](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/150).
 
 **pri-fidoiot**, **client-sdk-fidoiot**: The following RVVariable entries are ignored -
 RVSvCertHash, RVClCertHash, RVUserInput, RVWifiSsid, RVWifiPw, RVMedium, RVExtRV. The following
-RVProtocolValue entries are ignored - RVProtRest, RVProtTcp, RVProtCoapTcp and RVProtCoapUdp. Refer
-to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/151) for more
-details.
+RVProtocolValue entries are ignored - RVProtRest, RVProtTcp, RVProtCoapTcp and RVProtCoapUdp. This
+is tracked through GitHub issue
+[client-sdk-fidoiot#151](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/151).
 
 **client-sdk-fidoiot**: Maximum supported value for RVDelaySec is 3600s. If no RVDelaySec is
 provided, a delay of 3 seconds is used while trying successive RendezvousDirectives and a delay of
-120 seconds is used while retrying the RendezvousInfo. The delay is not randomized by +/-30s. Refer
-to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/152) for more
-details.
+120 seconds is used while retrying the RendezvousInfo. The delay is not randomized by +/-30s. This
+is tracked through GitHub issue
+[client-sdk-fidoiot#152](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/152).
 
 **pri-fidoiot**: RVDelaySec is not honoured for TO0 retries with RendezvousInfo, due to possible
-conflicts with the TO0Scheduler. Refer to
-[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/346) for more details.
+conflicts with the TO0Scheduler. This is tracked through GitHub issue
+[pri-fidoiot#346](https://github.com/secure-device-onboard/pri-fidoiot/issues/346).
 
-**client-sdk-fidoiot**: IPAddress.ip6 is not supported. Refer to
-[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/156) for more details.
+**client-sdk-fidoiot**: IPAddress.ip6 is not supported. This is tracked through GitHub issue
+[client-sdk-fidoiot#156](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/156).
 
 **client-sdk-fidoiot**: Error code values are not implemented as per section 5.1. Generic error code '100'
-and '500' are sent to the servers. Refer to
-[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/153) for more details.
+and '500' are sent to the servers. This is tracked through GitHub issue
+[client-sdk-fidoiot#153](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/153).
 
 **pri-fidoiot**: The maven build occasionally fails while running the unit tests. The issue happens
-rarely and is often fixed during successive retries. Refer to
-[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/347) for more details.
+rarely and is often fixed during successive retries. This is tracked through GitHub issue
+[pri-fidoiot#347](https://github.com/secure-device-onboard/pri-fidoiot/issues/347).
 
 **pri-fidoiot**: get-cbor-bytes.sh script uses cbor.me website for generating the RendezvousInfo
 CBOR bytes. This site should be accessible from the local machine while generating RendezvousInfo
-for different configurations. Refer to
-[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/348) for more details.
+for different configurations. This is tracked through GitHub issue
+[pri-fidoiot#348](https://github.com/secure-device-onboard/pri-fidoiot/issues/348).
 
 **client-sdk-fidoiot**: The key 'devmod:modules' and its corresponding value cannot be broken into
 multiple message based on the maximum MTU size indicated by the Owner, and is sent in a single
-message. Addition of ServiceInfo modules to this key requires manual change in the source. Refer to
-[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/154) for more details.
+message. Addition of ServiceInfo modules to this key requires manual change in the source. This is
+tracked through GitHub issue
+[client-sdk-fidoiot#154](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/154).
 
 **client-sdk-fidoiot**: Only the 'devmod' module is supported as a Device ServiceInfo module.
 Support for adding additional Device ServiceInfo modules and subsequent response framework to the
-Owner, has not yet been implemented. Refer to
-[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/155) for more details.
+Owner, has not yet been implemented. This is tracked through GitHub issue
+[client-sdk-fidoiot#155](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/155).
 
 ### SHA256 checksum for release binaries
 
 *Following SHA256 checksum is calculated using sha256sum tool*
 ```
+61250074c052cada285cab2b2336a6984ac2337a84689d48be6fafcd8f64f85b - client-sdk-fidoiot-v1.0.0.tar.gz
+f0c0b93857b07a7e5c19aeada5c7c0fb221fb1234f2b10d4c7232e46084b5428 - epid-verification-service-v1.0.0.tar.gz
+31e1e95431cbf025502cf7c2671477ed792ec82bec31aee58b2d81b998e4f848 - pri-fidoiot-v1.0.0.tar.gz
+2efd9e5c37230c878f1e8253144c912de04f6287b9041d65a596fe1bcd0074fa - NOTICES-v1.0.0.tar.gz
 ```
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs/1.0.0
+https://secure-device-onboard.github.io/docs-fidoiot/1.0.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 
