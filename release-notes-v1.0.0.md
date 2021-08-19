@@ -97,39 +97,50 @@ AES-CCM-64-128-256.
 
 **pri-fidoiot**, **client-sdk-fidoiot**: Section 3.3.2 defines hashtype as 'uint8', but the values
 for SHA256 and SHA384 are negative. In the implementation, the 'hashtype' is considered as 'int8'.
+ Refer to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/150) for
+ more details.
 
 **pri-fidoiot**, **client-sdk-fidoiot**: The following RVVariable entries are ignored -
-RVSvCertHash, RVClCertHash, RVUserInput, RVWifiSsid, RVWifiPw, RVMedium, RVExtRV.
-
-**pri-fidoiot**, **cient-sdk-fidoiot**: The following RVProtocolValue entries are ignored -
-RVProtRest, RVProtTcp, RVProtCoapTcp and RVProtCoapUdp.
+RVSvCertHash, RVClCertHash, RVUserInput, RVWifiSsid, RVWifiPw, RVMedium, RVExtRV. The following
+RVProtocolValue entries are ignored - RVProtRest, RVProtTcp, RVProtCoapTcp and RVProtCoapUdp. Refer
+to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/151) for more
+details.
 
 **client-sdk-fidoiot**: Maximum supported value for RVDelaySec is 3600s. If no RVDelaySec is
 provided, a delay of 3 seconds is used while trying successive RendezvousDirectives and a delay of
-120 seconds is used while retrying the RendezvousInfo. The delay is not randomized by +/-30s.
+120 seconds is used while retrying the RendezvousInfo. The delay is not randomized by +/-30s. Refer
+to [issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/152) for more
+details.
 
 **pri-fidoiot**: RVDelaySec is not honoured for TO0 retries with RendezvousInfo, due to possible
-conflicts with the TO0Scheduler.
+conflicts with the TO0Scheduler. Refer to
+[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/346) for more details.
 
-**client-sdk-fidoiot**: IPAddress.ip6 is not supported. (section 3.3.9)
+**client-sdk-fidoiot**: IPAddress.ip6 is not supported. Refer to
+[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/156) for more details.
 
 **client-sdk-fidoiot**: Error code values are not implemented as per section 5.1. Generic error code '100'
-and '500' are sent to the servers. [issue #](URL)
+and '500' are sent to the servers. Refer to
+[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/153) for more details.
 
 **pri-fidoiot**: The maven build occasionally fails while running the unit tests. The issue happens
-rarely and is often fixed during successive retries. [issue #](URL)
+rarely and is often fixed during successive retries. Refer to
+[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/347) for more details.
 
 **pri-fidoiot**: get-cbor-bytes.sh script uses cbor.me website for generating the RendezvousInfo
 CBOR bytes. This site should be accessible from the local machine while generating RendezvousInfo
-for different configurations. [issue #](URL)
+for different configurations. Refer to
+[issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/348) for more details.
 
 **client-sdk-fidoiot**: The key 'devmod:modules' and its corresponding value cannot be broken into
 multiple message based on the maximum MTU size indicated by the Owner, and is sent in a single
-message. Addition of ServiceInfo modules to this key requires manual change in the source.
+message. Addition of ServiceInfo modules to this key requires manual change in the source. Refer to
+[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/154) for more details.
 
 **client-sdk-fidoiot**: Only the 'devmod' module is supported as a Device ServiceInfo module.
 Support for adding additional Device ServiceInfo modules and subsequent response framework to the
-Owner, has not yet been implemented,
+Owner, has not yet been implemented. Refer to
+[issue](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/155) for more details.
 
 ### SHA256 checksum for release binaries
 
