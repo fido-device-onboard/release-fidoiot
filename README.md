@@ -4,5 +4,6 @@ Standard implementation.
 
 # List of release notes
 
-- [v0.3.0](release-notes-v0.3.0.md)
+- [v1.0.0](release-notes-v1.0.0.md)
 - [v0.5.0](release-notes-v0.5.0.md)
+- [v0.3.0](release-notes-v0.3.0.md)
