@@ -15,6 +15,6 @@ b74eb98bfc1e8e020b392f132f9f17036f564eb4f03ad228ddbaba90a3b83beb - third-party-c
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.1.4
+https://fido-device-onboard.github.io/docs-fidoiot/1.1.4
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*

@@ -5,10 +5,10 @@ v0.5.0
 This release contains a reference implementation of [FIDO Device Onboard (FDO) Specification](https://fidoalliance.org/specs/FDO/fido-device-onboard-v1.0-ps-20210323/).
 
 It includes 4 components:
-  * Protocol Reference Implementation (PRI): [pri-fidoiot](https://github.com/secure-device-onboard/pri-fidoiot) is a JAVA based implementation of all the components specified in the FDO Specification.
-  * Client SDK: [client-sdk-fidoiot](https://github.com/secure-device-onboard/client-sdk-fidoiot) is a C based implementation for the device component specified in the FDO Specification. Additionally, it supports an implementation of the device that uses TPM infrastructure.
-  * EPID Verification Service: [epid-verification-service](https://github.com/secure-device-onboard/epid-verification-service) is a wrapper service written on top of EPID SDK to assist FDO Rendezvous service and FDO Owner service to perform device signature verification for EPID based devices.
-  * Test: [test-fidoiot](https://github.com/secure-device-onboard/test-fidoiot) implements a test-suite that gets executed as part of continuous integration pipeline.
+  * Protocol Reference Implementation (PRI): [pri-fidoiot](https://github.com/fido-device-onboard/pri-fidoiot) is a JAVA based implementation of all the components specified in the FDO Specification.
+  * Client SDK: [client-sdk-fidoiot](https://github.com/fido-device-onboard/client-sdk-fidoiot) is a C based implementation for the device component specified in the FDO Specification. Additionally, it supports an implementation of the device that uses TPM infrastructure.
+  * EPID Verification Service: [epid-verification-service](https://github.com/fido-device-onboard/epid-verification-service) is a wrapper service written on top of EPID SDK to assist FDO Rendezvous service and FDO Owner service to perform device signature verification for EPID based devices.
+  * Test: [test-fidoiot](https://github.com/fido-device-onboard/test-fidoiot) implements a test-suite that gets executed as part of continuous integration pipeline.
 
 ### New Features
 
@@ -57,7 +57,7 @@ None
 
 ### Known Issues
 
-* The REST end-point call for uploading ServiceInfo files to the 'owner' database occasionally fails. This is tracked through GitHub issue [pri-fidoiot#117](https://github.com/secure-device-onboard/pri-fidoiot/issues/117).
+* The REST end-point call for uploading ServiceInfo files to the 'owner' database occasionally fails. This is tracked through GitHub issue [pri-fidoiot#117](https://github.com/fido-device-onboard/pri-fidoiot/issues/117).
 
 ### SHA256 checksum for release binaries
 
@@ -70,7 +70,7 @@ None
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs/0.5.0
+https://fido-device-onboard.github.io/docs/0.5.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 

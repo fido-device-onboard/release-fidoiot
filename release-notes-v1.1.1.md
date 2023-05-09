@@ -7,11 +7,11 @@ v1.1.1
 ### Known Issues
 
 **client-sdk-fidoiot**: Binaries built on different systems with different openssl versions fail to execute in certain scenarios with different platforms. 
- This is tracked through the GitHub issue [client-sdk-fidoiot#189](https://github.com/secure-device-onboard/client-sdk-fidoiot/issues/189).
+ This is tracked through the GitHub issue [client-sdk-fidoiot#189](https://github.com/fido-device-onboard/client-sdk-fidoiot/issues/189).
 **epid-verification-service**: Need to manually update the build context in epid verification service on RedHat. 
- This is tracked through the GitHub issue [epid-verification-service#38](https://github.com/secure-device-onboard/epid-verification-service/issues/38).
+ This is tracked through the GitHub issue [epid-verification-service#38](https://github.com/fido-device-onboard/epid-verification-service/issues/38).
 **epid-verification-service**: Support for Ubuntu 22.04 needs to be enabled on epid verification service. 
- This is tracked through the GitHub issue [epid-verification-service#39](https://github.com/secure-device-onboard/epid-verification-service/issues/39).
+ This is tracked through the GitHub issue [epid-verification-service#39](https://github.com/fido-device-onboard/epid-verification-service/issues/39).
 ### SHA256 checksum for release binaries
 
 *Following SHA256 checksum is calculated using sha256sum tool*
@@ -24,7 +24,7 @@ acf149208a72b6f6fb615a9ba490fafb9202d2929067bdb43b269ef9f3e9d68b pri-fidoiot-v1.
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.1.1
+https://fido-device-onboard.github.io/docs-fidoiot/1.1.1
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 

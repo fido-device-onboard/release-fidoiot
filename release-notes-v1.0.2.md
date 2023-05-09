@@ -7,7 +7,7 @@ v1.0.2
 **client-sdk-fidoiot**: There are no changes from previous release.  
 
 ### Known Issues
-**pri-fidoiot**: Upgrading from H2 1.4.200 to 2.X.X version resulted in a few incompatibilities. See this [GitHub issue](https://github.com/secure-device-onboard/pri-fidoiot/issues/401) for more details.
+**pri-fidoiot**: Upgrading from H2 1.4.200 to 2.X.X version resulted in a few incompatibilities. See this [GitHub issue](https://github.com/fido-device-onboard/pri-fidoiot/issues/401) for more details.
 
 The tag v1.0.2 and the branches 1.0-rel, 1.10-rel points to the same commit ( #991abd4, Version rollover to 1.0.2 Release). In build/build.sh script, the remote branch points to 1.10-rel, which is same as the 1.0-rel branch and v1.0.2 tag.
 
@@ -24,7 +24,7 @@ bf249081c65f8b8c9e6bd531cdeaac8751777f883d87d6b8bde63cb851d6f0e1 pri-fidoiot-v1.
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.0.0
+https://fido-device-onboard.github.io/docs-fidoiot/1.0.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 
