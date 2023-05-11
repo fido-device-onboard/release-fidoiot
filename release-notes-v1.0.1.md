@@ -19,7 +19,7 @@ b781c7df0638ef6dae64318848bcc5f6ece3dd0395b558187ac196ecdbb708fd  epid-verificat
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.0.0
+https://fido-device-onboard.github.io/docs-fidoiot/1.0.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 

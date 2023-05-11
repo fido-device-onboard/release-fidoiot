@@ -20,7 +20,7 @@ v1.1.0.2
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.1.0
+https://fido-device-onboard.github.io/docs-fidoiot/1.1.0
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 

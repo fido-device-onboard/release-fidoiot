@@ -12,16 +12,16 @@ This release contains a reference implementation of [FIDO Device Onboard (FDO) S
 ### Known Issues
 
 **pri-fidoiot**: Read permission needs to be added to server-key.pem file while configuring database secrets.  
- This is tracked through the GitHub issue [pri-fidoiot#551](https://github.com/secure-device-onboard/pri-fidoiot/issues/551).
+ This is tracked through the GitHub issue [pri-fidoiot#551](https://github.com/fido-device-onboard/pri-fidoiot/issues/551).
 
 **pri-fidoiot**: Starting a component with an invalid port number or with a port already in use gives an exception.  
- This is tracked through the GitHub issue [pri-fidoiot#467](https://github.com/secure-device-onboard/pri-fidoiot/issues/467).
+ This is tracked through the GitHub issue [pri-fidoiot#467](https://github.com/fido-device-onboard/pri-fidoiot/issues/467).
  
 **pri-fidoiot**: RVDelaySec is currently not considered during TO0 and TO1.
- This is tracked through the GitHub issue [pri-fidoiot#468](https://github.com/secure-device-onboard/pri-fidoiot/issues/468).
+ This is tracked through the GitHub issue [pri-fidoiot#468](https://github.com/fido-device-onboard/pri-fidoiot/issues/468).
 
 **pri-fidoiot**: Proxy settings for owner to be set explicitly when using a proxy.
- This is tracked through the GitHub issue [pri-fidoiot#476](https://github.com/secure-device-onboard/pri-fidoiot/issues/476).
+ This is tracked through the GitHub issue [pri-fidoiot#476](https://github.com/fido-device-onboard/pri-fidoiot/issues/476).
 
 ### SHA256 checksum for release binaries
 
@@ -35,7 +35,7 @@ d058130cf45ea84728b6a5a3824d1cccd53c0ab9f5247e982c40070b91a16177  NOTICES-v1.1.3
 
 ### Documentation
 
-https://secure-device-onboard.github.io/docs-fidoiot/1.1.3
+https://fido-device-onboard.github.io/docs-fidoiot/1.1.3
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*
 
