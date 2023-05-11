@@ -31,7 +31,7 @@ None
 
 ### Documentation
 
-https://fido-device-onboard.github.io/docs/  
+https://fido-device-onboard.github.io/docs-fidoiot/  
 
 *Please ignore Source code zip/tar.gz files. These are default artifacts generated during GitHub Release process.*  
 
