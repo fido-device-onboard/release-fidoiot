@@ -21,11 +21,9 @@ It includes the below components:
   
 ### New Features
 
-**client-sdk-fidoiot**: Securing the device credentials (secrets) inside TPM.
+**client-sdk-fidoiot**: Securing the device credentials (secrets) inside TPM as per the spec.
 
 **client-sdk-fidoiot**: Support for FIDO Service Info Module (FSIM) added.
-
-**client-sdk-fidoiot**: Support for Cross attestation between CSDK client and PRI services added.
 
 ### Changes to existing features
 
@@ -33,11 +31,9 @@ It includes the below components:
 
 ### Fixed Issues
  
-**client-sdk-fidoiot**, **pri-fidoiot**: Updated the required third party dependencies to be complaint with FIPS.
+**client-sdk-fidoiot**: Cross attestation between CSDK client and PRI services are fixed.
 
-**epid-verification-service**: Updated the required third party dependencies.
-
-**client-sdk-fidoiot**, **pri-fidoiot**: Defect fixes.
+**client-sdk-fidoiot**, **pri-fidoiot** **epid-verification-service**: Updated the required third party dependencies to be complaint with FIPS.
 
 ### Known Issues
 
