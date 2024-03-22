@@ -34,7 +34,8 @@ It includes the below components:
 
 
  The PRI FIDO IOT component uses Bouncy Castle FIPS as the primary security provider for all cryptographic operations within the project with the exception of the KDF.
- The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.*
+ The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.
+
 
 ### Fixed Issues
  
