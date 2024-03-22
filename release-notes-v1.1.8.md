@@ -44,9 +44,9 @@ It includes the below components:
 
 *Following SHA256 checksum is calculated using sha256sum tool*
 ```
-ad34d3b74483915fe11fbad6e3d45cda44264546f0571b1e03160121c88a1fff - client-sdk-fidoiot-v1.1.8.tar.gz
-5fa5685ee74bb906915b9c231f2d5f7c4bf8ca917fc124a45ec0772467db9d81 - epid-verification-service-v1.1.8.tar.gz
-49c07b1d124ced6932e728536173943cd2a079bf29441984eb62fd006c63bfed - pri-fidoiot-v1.1.8.tar.gz
+83aaad1b0c941b26c55cdc502036cc23df36ecf84094820fbb7dbfa110e5feba - client-sdk-fidoiot-v1.1.8.tar.gz
+d45404f8a5bf57c44781f97b45cf2558902f4baa4c8a068ab5fc3514ad08e211 - epid-verification-service-v1.1.8.tar.gz
+3f5c8d2eba14275b0a145a6c06aef9c8877845267a2bd4480e811797af51092e - pri-fidoiot-v1.1.8.tar.gz
 036b79df7485ec14dfbc5953dd7f5ad6bf7ae8b0dbc60e63bbba42254583c692 - NOTICES-v1.1.8.tar.gz
 b74eb98bfc1e8e020b392f132f9f17036f564eb4f03ad228ddbaba90a3b83beb - third-party-components.tar.gz
 ```
