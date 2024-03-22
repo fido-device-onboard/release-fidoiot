@@ -37,8 +37,6 @@ It includes the below components:
 
 ### Fixed Issues
  
-**client-sdk-fidoiot**: Cross attestation between CSDK client and PRI services are fixed.
-
 **client-sdk-fidoiot**, **pri-fidoiot** **epid-verification-service**: The version of third-party dependencies have been updated.
 
 ### Known Issues
