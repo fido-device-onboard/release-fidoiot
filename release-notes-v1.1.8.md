@@ -27,13 +27,13 @@ It includes the below components:
 
 **client-sdk-fidoiot**: Storage of credentials in TPM has been modified to be compliant with the TPM spec. Please note that the [FIDO Alliance specification "Securing FDO Credentials in the TPM"](https://fidoalliance.org/specs/FDO/securing-fdo-in-tpm-v1.0-rd-20231010/securing-fdo-in-tpm-v1.0-rd-20231010.html) has been published as a Review Draft by the FIDO Alliance, and is still subject to comment and change. With respect to [section 4.2, Handles for FDO Credentials](https://fidoalliance.org/specs/FDO/securing-fdo-in-tpm-v1.0-rd-20231010/securing-fdo-in-tpm-v1.0-rd-20231010.html#Handles_LABEL), Trusted Computing Group (TCG) has allocated the NVRAM addresses referenced, and is moving towards approval of the persistent object handles.
 
-**pri-fidoiot**: Added REST API support to update the replacement RV information.
+**client-sdk-fidoiot**, **epid-verification-service**, **pri-fidoiot**: Updated the required third party dependencies to be complaint with FIPS. The PRI FIDO IOT component uses Bouncy Castle FIPS as the primary security provider for all cryptographic operations within the project with the exception of the KDF. The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.
 
-**client-sdk-fidoiot**, **pri-fidoiot**, **epid-verification-service**: Updated the required third party dependencies to be complaint with FIPS. The PRI FIDO IOT component uses Bouncy Castle FIPS as the primary security provider for all cryptographic operations within the project with the exception of the KDF. The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.
+**pri-fidoiot**: Added REST API support to update the replacement RV information.
 
 ### Fixed Issues
  
-**client-sdk-fidoiot**, **pri-fidoiot**, **epid-verification-service**: The version of third-party dependencies have been updated.
+**client-sdk-fidoiot**, **epid-verification-service**, **pri-fidoiot**: The version of third-party dependencies have been updated.
 
 ### Known Issues
 
