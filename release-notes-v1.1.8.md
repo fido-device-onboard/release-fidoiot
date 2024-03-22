@@ -29,17 +29,11 @@ It includes the below components:
 
 **pri-fidoiot**: Added REST API support to update the replacement RV information.
 
-**client-sdk-fidoiot**, **pri-fidoiot** **epid-verification-service**: Updated the required third party dependencies to be complaint with FIPS.
-
-
-
- The PRI FIDO IOT component uses Bouncy Castle FIPS as the primary security provider for all cryptographic operations within the project with the exception of the KDF.
- The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.
-
+**client-sdk-fidoiot**, **pri-fidoiot**, **epid-verification-service**: Updated the required third party dependencies to be complaint with FIPS. The PRI FIDO IOT component uses Bouncy Castle FIPS as the primary security provider for all cryptographic operations within the project with the exception of the KDF. The KDF implementation is compliant with the FIDO specification and is not based on the Bouncy Castle FIPS.
 
 ### Fixed Issues
  
-**client-sdk-fidoiot**, **pri-fidoiot** **epid-verification-service**: The version of third-party dependencies have been updated.
+**client-sdk-fidoiot**, **pri-fidoiot**, **epid-verification-service**: The version of third-party dependencies have been updated.
 
 ### Known Issues
 
