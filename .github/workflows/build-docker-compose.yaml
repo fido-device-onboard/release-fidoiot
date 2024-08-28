@@ -1,4 +1,4 @@
-name: build epid-verification-service via docker compose
+name: build release-fidoiot
 on:
   workflow_dispatch:
   push:
