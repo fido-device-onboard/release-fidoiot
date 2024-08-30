@@ -1,0 +1,16 @@
+name: build release-fidoiot
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, '*rel']
+  pull_request:
+    branches: [master, '*rel']
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout scm
+        uses: actions/checkout@v3
